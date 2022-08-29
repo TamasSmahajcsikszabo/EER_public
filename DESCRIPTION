@@ -1,12 +1,17 @@
 Package: EER
-Title: What the Package Does (One Line, Title Case)
-Version: 0.0.0.9000
+Title: ELTE Emotion Regulation Group
+Version: 0.1.0
 Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"),
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
+    person("Tamas", "Smahajcsik-Szabot", , "tamas.smahajcsikszabo@outlook.hu", role = c("aut", "cre"))
+Description: R utility for data analysis and visualisation
 License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
     license
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.2.1
+Imports: 
+    dplyr,
+    ggplot2,
+    magrittr,
+    readr,
+    tidyr
