@@ -4,6 +4,7 @@ library(tidyr)
 library(dplyr)
 library(ggplot2)
 
+#` Boxplot
 boxplot <- function(data, x = "day", y = "rpa_daily_tot_wpmc", xlab = "Day", ylab = "RPA Daily Total WPMC") {
     ggplot(data, aes_string(x = x, y = y, group = x)) +
         geom_boxplot() +
@@ -14,6 +15,8 @@ boxplot <- function(data, x = "day", y = "rpa_daily_tot_wpmc", xlab = "Day", yla
             y = ylab
         )
 }
+
+#` Frequency plot
 frequency_plot <- function(data, x="rpa_daily_tot", labels=c("daily positive rumination", "frequencies")){
     freqs <- data %>%
     group_by_at(x) %>%
@@ -36,6 +39,7 @@ frequency_plot <- function(data, x="rpa_daily_tot", labels=c("daily positive rum
     scale_x_continuous(breaks=)
 }
 
+#` Hexbin plot
 hexplot <- function(data, x = "daily_posaff", y = "rpa_daily_tot_wpmc", xlab = "Daily Positive Aff.", ylab = "RPA Daily Total WMPC") {
     range1 <- range(data[x], na.rm=TRUE)
     range2 <- range(data[y], na.rm=TRUE)
